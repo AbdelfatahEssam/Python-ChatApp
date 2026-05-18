@@ -1,6 +1,7 @@
 import socket
 import threading
 import os
+import sys
 
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT" ,49500 ))
@@ -40,7 +41,7 @@ def broadcast(header, body, sender):
             try:
                 client.sendall(header)
                 client.sendall(body)
-
+                sys.stdout.flush()
             except:
                 pass
 
