@@ -1,0 +1,4 @@
+pillow
+moviepy
+imageio
+imageio-ffmpeg
